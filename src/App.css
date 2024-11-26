@@ -70,6 +70,7 @@ p {
 }
 
 a {
+  font-weight: 400;
   color: var(--blue);
   transition: all 80ms linear;
 
