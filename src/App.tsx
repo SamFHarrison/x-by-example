@@ -1,5 +1,6 @@
 import "./App.css";
 import { Link } from "./constants";
+import { resources } from "./resources";
 
 function App() {
   return (
@@ -24,15 +25,15 @@ function App() {
         </section>
 
         <ol className="resources">
-          <li className="resource">
-            <h2>
-              <a href="https://gobyexample.com/">Go</a>
-            </h2>
-            <p className="resource-description">
-              A fast, statically typed, concurrent programming language designed
-              for simplicity and scalability.
-            </p>
-          </li>
+          {resources.map((resource) => (
+            <li className="resource">
+              <h2>
+                <a href={resource.url} target="_blank">
+                  {resource.name}
+                </a>
+              </h2>
+            </li>
+          ))}
         </ol>
 
         <footer>
